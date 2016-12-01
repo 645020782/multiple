@@ -4,6 +4,7 @@ public class TestTwo {
 	public static void main(String[] args){
 		int num = 10;
 		RunnableNum r = new RunnableNum(num);
+		System.out.println("≥ı ºªØcount:"+r.getCount());
 		Thread t1 = new Thread(r,"A");
 		Thread t2 = new Thread(r,"B");
 		t1.start();
@@ -12,11 +13,11 @@ public class TestTwo {
 			t1.join();
 			t2.join();
 			Thread.sleep(1000);
-			Thread.yield();
+			//Thread.yield();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("end !!!!"+r.count);
+		System.out.println("end !!!!"+r.getCount());
 	}
 }

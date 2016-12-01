@@ -1,10 +1,10 @@
 package com.utstar.multiple;
 
 public class RunnableNum implements Runnable{
-    int count;
+    private int count;
 	private int num;
 	public RunnableNum(int num){
-		this.count = 1000;
+		this.count = 10000;
 		this.num = num;
 	}
 	@Override
@@ -12,8 +12,8 @@ public class RunnableNum implements Runnable{
 		int i = 0;
 			while(count > 0){
 				try {
-					System.out.println(Thread.currentThread().getName()+",执行了"+(i+1)+"次"+",count:"+count);
 					count = discount();
+					System.out.println(Thread.currentThread().getName()+",执行了"+(i+1)+"次"+",count:"+count);
 					i++;
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
@@ -22,7 +22,14 @@ public class RunnableNum implements Runnable{
 			}
 		
 	}
-	public synchronized int discount(){
+	synchronized public int discount(){
 		return count - num;
 	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
+	
 }
