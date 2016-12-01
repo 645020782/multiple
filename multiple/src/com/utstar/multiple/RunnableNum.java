@@ -12,8 +12,9 @@ public class RunnableNum implements Runnable{
 		int i = 0;
 			while(count > 0){
 				try {
+					//test
 					count = discount();
-					System.out.println(Thread.currentThread().getName()+",Ö´ĞĞÁË"+(i+1)+"´Î"+",count:"+count);
+					System.out.println(Thread.currentThread().getName()+",Ã–Â´ÃÃÃÃ‹"+(i+1)+"Â´Ã"+",count:"+count);
 					i++;
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
