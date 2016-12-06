@@ -35,6 +35,7 @@ public class QueueList {
 				c.await();
 			 }
 			array.add(s);
+			System.out.println("共有鸭子:"+getCount()+"只");
 			c1.signalAll();
 		}catch(Exception e){
 			e.printStackTrace();
@@ -60,7 +61,17 @@ public class QueueList {
 			}
 		return s;
 	}
-	synchronized public int getCount(){
-		return array.size();
+    public int getCount(){
+		lock.lock();
+		//System.out.println("进入getCount");
+		int c = 0;
+			try{
+				c = array.size();
+			}catch(Exception e){
+				e.printStackTrace();
+			}finally{
+				lock.unlock();
+			}
+		return c;
 	}
 }

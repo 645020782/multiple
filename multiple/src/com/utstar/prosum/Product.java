@@ -11,7 +11,7 @@ public class Product extends Thread{
 	@Override
 	public void run() {
 		int i = 0;
-		int time = 50;
+		int time = 10;
 		String temp = null;
 		while(time>0){
 			if(list.isFull()){
@@ -21,9 +21,9 @@ public class Product extends Thread{
 					e.printStackTrace();
 				}
 			}
-			temp = getProduct()+i;
+			temp = getProduct()+(i+1);
+			System.out.println(Thread.currentThread().getName()+","+temp);
 			list.add(temp);
-			System.out.println(Thread.currentThread().getName()+","+temp+"π≤”–…’—º:"+list.getCount()+"÷ª");
 			i++;
 			time--;
 		}
