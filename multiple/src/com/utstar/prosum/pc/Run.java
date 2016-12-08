@@ -9,13 +9,13 @@ public class Run {
 		ThreadP t5 = new ThreadP(p);
 		ThreadP t6 = new ThreadP(p);
 		ThreadC t2 = new ThreadC(c);
-		/*ThreadC t3 = new ThreadC(c);
-		ThreadC t4 = new ThreadC(c);*/
+		ThreadC t3 = new ThreadC(c);
+		ThreadC t4 = new ThreadC(c);
 		t1.start();
 		t5.start();
 		t6.start();
 		t2.start();
-		/*t3.start();
-		t4.start();*/
+		t3.start();
+		t4.start();
 	}
 }

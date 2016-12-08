@@ -6,7 +6,7 @@ import java.util.List;
 public class MyStack {
 	private List<String> list = new ArrayList<String>();
 	synchronized public void push(){
-		while(list.size()==1){
+		while(list.size()==100){
 			try {
 				System.out.println(Thread.currentThread().getName()+"...pushing...,now status is waitting!");
 				wait();
