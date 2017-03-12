@@ -7,7 +7,7 @@ import java.util.List;
  * @param <E>
  */
 public class ImprovedList<E> {
-	private List<E> list;
+	private final List<E> list;
 	public ImprovedList(List<E> list){
 		this.list = list;
 	}
