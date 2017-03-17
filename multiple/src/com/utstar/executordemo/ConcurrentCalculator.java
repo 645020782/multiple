@@ -14,7 +14,7 @@ public class ConcurrentCalculator {
 	private int cupCoreNumber;
 	private List<Future<Long>> tasks = new ArrayList<Future<Long>>();
 	class SumCalculator implements Callable<Long>{
-		private int start;
+		private int start;  
 		private int end;
 		private int[] numbers;
 		public SumCalculator(final int[] numbers, int start, int end) {
